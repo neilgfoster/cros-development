@@ -29,15 +29,12 @@ done
 # if the org and repo variables are set
 if [[ -n "$ORG" && -n "$REPO" ]]; then
   sudo apt install -y git
-  if [ "$(basename "$PWD")" = ".setup" ]; then
-    cd ..
-  fi
-  if [ "$(basename "$PWD")" = "$REPO" ]; then
-    cd ..
-  fi
-  if [ "$(basename "$PWD")" = "$ORG" ]; then
-    cd ..
-  fi
+  folders=(".setup" "base" "cros-base" "cros-setup""$REPO" "$ORG")
+  for folder in "${folders[@]}"; do
+    if [ "$(basename "$PWD")" = "$folder" ]; then
+      cd ..
+    fi
+  done
   mkdir -p "$ORG"
   cd "$ORG"
   if [ ! -d "$REPO" ]; then
