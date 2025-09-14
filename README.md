@@ -13,5 +13,5 @@ This repository only includes those tools required to enable development using d
 1. Make sure you are in the directory where you want the repository to be cloned.
 2. Open the Chrome OS Linux terminal, then copy and paste the following text to download and run the setup scripts.
 ```bash
-bash <(curl -sS https://raw.githubusercontent.com/neilgfoster/base/main/.setup/setup.sh) -o=neilgfoster -r=cros-development
+bash <(curl -sS https://raw.githubusercontent.com/neilgfoster/base/cros-development/.setup/setup.sh) -o=neilgfoster -r=cros-development
 ```

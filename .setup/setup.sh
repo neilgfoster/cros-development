@@ -49,7 +49,7 @@ fi
 # Ensure main branch is checked out
 echo
 echo -ne "${YELLOW}Specify the branch to checkout [main]: ${NC}"
-read BRANCH_NAME
+read BRANCH_NAME < /dev/tty
 echo
 BRANCH_NAME=${BRANCH_NAME:-main}
 git checkout "$BRANCH_NAME"
