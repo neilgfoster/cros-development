@@ -29,7 +29,7 @@ done
 # if the org and repo variables are set
 if [[ -n "$ORG" && -n "$REPO" ]]; then
   sudo apt install -y git
-  folders=(".setup" "base" "cros-base" "cros-setup""$REPO" "$ORG")
+  folders=(".setup" "base" "cros-base" "cros-setup" "$REPO" "$ORG")
   for folder in "${folders[@]}"; do
     if [ "$(basename "$PWD")" = "$folder" ]; then
       cd ..
