@@ -1,14 +1,17 @@
-# cros-base
-This is the base template repository for my ChromeOS setup. It provides a basic structure and common files that I reuse across different projects.
+# cros-development
+This repository contains scripts and configurations to set up a development environment on Chrome OS using the Linux (Crostini) feature. It includes tools that I use for development.
 
-The setup script includes functions for installing all common packages and adds this repository as an upstream remote, allowing updates to be easily merged into downstream projects.
+This repository only includes those tools required to enable development using devcontainers. That means the actual development tools are installed within the devcontainers.
 
-> [!NOTE]
-> Don't forget to update the -o and -r variables in the script in the "Getting Started" section below.
+## Tools Included
+- Git
+- Git LFS
+- VSCode
+- Docker CE
 
-# Getting Started
+## Getting Started
 1. Make sure you are in the directory where you want the repository to be cloned.
 2. Open the Chrome OS Linux terminal, then copy and paste the following text to download and run the setup scripts.
 ```bash
-bash <(curl -sS https://raw.githubusercontent.com/neilgfoster/base/main/.setup/setup.sh) -o=neilgfoster -r=cros-base
+bash <(curl -sS https://raw.githubusercontent.com/neilgfoster/base/main/.setup/setup.sh) -o=neilgfoster -r=cros-development
 ```
