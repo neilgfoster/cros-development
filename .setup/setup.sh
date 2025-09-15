@@ -39,7 +39,7 @@ if [ "${DEVCONTAINER}" != "true" ]; then
   # Navigate to the correct directory and clone
   if [[ -n "$ORG" && -n "$REPO" ]]; then
     sudo apt install -y git
-    folders=(".setup" "base" "$REPO" "$ORG")
+    folders=(".setup" "base" "cros-base" "cros-setup" "$REPO" "$ORG")
     for folder in "${folders[@]}"; do
       if [ "$(basename "$PWD")" = "$folder" ]; then
         cd ..
