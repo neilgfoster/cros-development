@@ -17,9 +17,9 @@ if [[ $install_vscodium =~ ^[Yy]$ ]]; then
     gpg
 
   # Import VSCodium GPG key
-  wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor > vscodium.gpg
-  sudo install -D -o root -g root -m 644 vscodium.gpg /usr/share/keyrings/vscodium.gpg
-  rm -f vscodium.gpg
+  wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
+    | gpg --dearmor \
+    | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
 
   # Add reference to upstream repository
   sudo tee /etc/apt/sources.list.d/vscodium.sources > /dev/null <<_EOF_
